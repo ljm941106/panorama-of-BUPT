@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A simple example</title>
+  <link rel="stylesheet" type="text/css" href="css/reset.css" />
+  <link rel="stylesheet" href="https://cdn.pannellum.org/2.4/pannellum.css" />
+  <script type="text/javascript" src="https://cdn.pannellum.org/2.4/pannellum.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/index.css" />
+</head>
+<body>
+
+  <div id="panorama"></div>
+  <div class="right-top-menu">
+    <h2>窗口搜索</h2>
+    <ul>
+      <li id="all">所有事项</li>
+    </ul>
+  </div>
+  <div class="modal">
+    <div class="modal-underview"></div>
+    <div class="modal-content">
+      <h2>办事事项</h2>
+      <i class="icon-close"><img src="image/close.png"></i>
+      <ul>
+        <li>
+          <span>党团综合</span>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/index?selectclasstag=党团综合" class="button">办事点我</a>
+        </li>
+        <li>
+          <span>科研财务</span>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/index?selectclasstag=科研财务" class="button">办事点我</a>
+        </li>
+        <li>
+          <span>人事服务</span>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/index?selectclasstag=人事服务" class="button">办事点我</a>
+        </li>
+        <li>
+          <span>外事服务</span>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/index?selectclasstag=外事服务" class="button">办事点我</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+  <script>
+    $("#all").click(function () {
+      $(".modal").fadeIn()
+    });
+    $(".modal-content .icon-close").click(function () {
+      $(".modal").fadeOut()
+    })
+    $(".modal-underview").click(function () {
+      $(".modal").fadeOut()
+    })
+    pannellum.viewer('panorama', {
+      "default": {
+        "firstScene": "scene1",
+        "author": "北京邮电大学",
+        "sceneFadeDuration": 1000,
+        "autoLoad": true,
+        "minPitch": -45,
+        "maxPitch": 45
+      },
+      "scenes": {
+        "scene1": {
+          "title": "场景1",
+          "pitch": -45,
+          "hfov": 110,
+          "pitch": 0,
+          "yaw": 0,
+          "type": "equirectangular",
+          // "panorama": "https://d.agilemaster.com.cn/o_1dgjdhccvt6k1lcma5r32k3t0g.jpg",
+          "panorama": "https://d.agilemaster.com.cn/o_1di9k1jlb7bdq4u1qouvdmgi2s.jpg",
+          "hotSpots": [
+            {
+              "pitch": -12,
+              "yaw": 2,
+              "type": "scene",
+              "text": "走到这里",
+              "sceneId": "scene2"
+						},
+            {
+              "pitch": -10,
+              "yaw": -30,
+              "type": "info",
+              "text": "点我办事",
+              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=党团综合",
+              "cssClass": "operation1"
+						}, {
+              "pitch": -5,
+              "yaw": -16,
+              "type": "info",
+              "text": "点我办事",
+              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=科研财务",
+              "cssClass": "operation2"
+						}, {
+              "pitch": -3,
+              "yaw": -10,
+              "type": "info",
+              "text": "点我办事",
+              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=人事服务",
+              "cssClass": "operation3"
+						}, {
+              "pitch": 0,
+              "yaw": -10,
+              "type": "info",
+              "text": "点我办事",
+              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=外事服务",
+              "cssClass": "operation4"
+						},
+					]
+        },
+        "scene2": {
+          "title": "场景2",
+          "pitch": -45,
+          "hfov": 110,
+          "yaw": 0,
+          "type": "equirectangular",
+          "panorama": "https://d.agilemaster.com.cn/o_1dgjdhgvu1o5d16nr1aop1jg615gel.jpg",
+          "hotSpots": [
+            {
+              "pitch": -12,
+              "yaw": 0,
+              "type": "scene",
+              "text": "走到这里",
+              "sceneId": "scene3",
+              "targetYaw": 180,
+              "targetPitch": -45,
+              "targetHfov": 120
+						}, {
+              "pitch": -20,
+              "yaw": -180,
+              "type": "scene",
+              "text": "回到前台",
+              "sceneId": "scene1",
+              "targetYaw": 90,
+              "targetPitch": 0,
+              "targetHfov": 120
+						},
+            {
+              "pitch": -15,
+              "yaw": -130,
+              "type": "info",
+              "text": "点我办事",
+              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=党团综合",
+              "cssClass": "operation1"
+						}, {
+              "pitch": -15,
+              "yaw": -51,
+              "type": "info",
+              "text": "点我办事",
+              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=科研财务",
+              "cssClass": "operation2"
+						}, {
+              "pitch": -8,
+              "yaw": -21,
+              "type": "info",
+              "text": "点我办事",
+              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=人事服务",
+              "cssClass": "operation3"
+						}, {
+              "pitch": -4,
+              "yaw": -12,
+              "type": "info",
+              "text": "点我办事",
+              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=外事服务",
+              "cssClass": "operation4"
+						},
+					]
+        },
+        "scene3": {
+          "title": "场景3",
+          "pitch": -45,
+          "hfov": 110,
+          "yaw": 0,
+          "type": "equirectangular",
+          "panorama": "https://d.agilemaster.com.cn/o_1dgjdhkek1c1jepl16m71vkm8n1q.jpg",
+          "hotSpots": [
+            {
+              "pitch": -30,
+              "yaw": 0,
+              "type": "scene",
+              "text": "走到这里",
+              "sceneId": "scene2",
+              "targetYaw": 180,
+              "targetPitch": -45,
+              "targetHfov": 110
+						},
+            {
+              "pitch": -4,
+              "yaw": 15,
+              "type": "info",
+              "text": "点我办事",
+              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=党团综合",
+              "cssClass": "operation1"
+            }, {
+              "pitch": -8,
+              "yaw": 24,
+              "type": "info",
+              "text": "点我办事",
+              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=科研财务",
+              "cssClass": "operation2"
+            }, {
+              "pitch": -16.5,
+              "yaw": 60,
+              "type": "info",
+              "text": "点我办事",
+              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=人事服务",
+              "cssClass": "operation3"
+            }, {
+              "pitch": -13,
+              "yaw": 136,
+              "type": "info",
+              "text": "点我办事",
+              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=外事服务",
+              "cssClass": "operation4"
+            },
+					]
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>
