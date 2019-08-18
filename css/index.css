@@ -8,7 +8,11 @@ body {
 .operation1,
 .operation2,
 .operation3,
-.operation4 {
+.operation4,
+.operation5,
+.operation6,
+.operation7 {
+  z-index: 999;
   background-image: none;
   width: 80px;
   line-height: 30px;
@@ -22,22 +26,38 @@ body {
 .operation1:after,
 .operation2:after,
 .operation3:after,
-.operation4:after {
+.operation4:after,
+.operation5:after,
+.operation6:after,
+.operation7:after {
+  z-index: 999;
   content: '党团综合';
   color: #FFFFFF;
   font-size: 14px;
 }
 
 .operation2:after {
-  content: '科研财务';
+  content: '教学服务';
 }
 
 .operation3:after {
-  content: '人事服务';
+  content: '科研财务';
 }
 
 .operation4:after {
+  content: '人事服务';
+}
+
+.operation5:after {
   content: '外事服务';
+}
+
+.operation6:after {
+  content: '资产服务';
+}
+
+.operation7:after {
+  content: 'IT服务';
 }
 
 .pnlm-hotspot.pnlm-scene {
@@ -114,10 +134,10 @@ body {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
+  max-width: 80%;
   background: #FFFFFF;
   border-radius: 10px;
   overflow: hidden;
-  position: relative;
 }
 
 .modal-content .icon-close {
