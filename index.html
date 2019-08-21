@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>北京邮电大学数字政务</title>
   <link rel="stylesheet" type="text/css" href="css/reset.css" />
-  <link rel="stylesheet" href="https://cdn.pannellum.org/2.4/pannellum.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.2/build/pannellum.css" />
   <link rel="stylesheet" type="text/css" href="css/index.css" />
-  <!-- <script src="js/rem.js" type="text/javascript" charset="utf-8"></script> -->
 </head>
 <body>
-
   <div id="panorama"></div>
   <div class="right-top-menu">
     <h2>窗口搜索</h2>
@@ -55,21 +53,38 @@
       </ul>
     </div>
   </div>
-  <script type="text/javascript" src="https://cdn.pannellum.org/2.4/pannellum.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.2/build/pannellum.js"></script>
   <script src="js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
-
   <script>
     //pc
-    var scene1Pic = "https://d.agilemaster.com.cn/o_1dihbaqu71jrl1f6rr6nlnu1j0tg.jpg";
-    var scene2Pic = "https://d.agilemaster.com.cn/o_1dihbav8ht7ctvk1m4dgfravpm.jpg";
-    var scene3Pic = "https://d.agilemaster.com.cn/o_1dihbav8h19lr6m16a717vn1e5en.jpg";
+    var scene1Pic = "https://d.agilemaster.com.cn/o_1din199jn66k1qm11g1p1bti1l20e.jpg";
+    var scene2Pic = "https://d.agilemaster.com.cn/o_1din199jna0oko1g141k9fum9f.jpg";
+    var scene3Pic = "https://d.agilemaster.com.cn/o_1din199jn111r1h6c1pdq1abrvkng.jpg";
     var panoramaHfov = 90; //景深
+    var maxHfov = 110; //最大景深
+    //链接
+    var linkOut = -2.2;
+    var linkAsset = -1.4;
+    var linkIT = -0.6;
+    var linkTeach = -2.2;
+    var linkParty = -1.4;
     //移动端
     if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { //移动端
-      scene1Pic = "https://d.agilemaster.com.cn/o_1dihmvqfk2pj1q63oi41pmkekp11.jpg";
-      scene2Pic = "https://d.agilemaster.com.cn/o_1dihmvqfk6j2m5ppko177raun12.jpg";
-      scene3Pic = "https://d.agilemaster.com.cn/o_1dihmvqflh7d125alof1fbimrq13.jpg";
-      panoramaHfov = 35;
+      //质量10
+      scene1Pic = "https://d.agilemaster.com.cn/o_1din199jnbm7oi7h52ck51vjdh.jpg";
+      scene2Pic = "https://d.agilemaster.com.cn/o_1din199jn1cgaha0eut1hd1c40i.jpg";
+      scene3Pic = "https://d.agilemaster.com.cn/o_1din199jnn6i17nd1vn11qaj18orj.jpg";
+      //质量11
+      // scene1Pic = "https://d.agilemaster.com.cn/o_1din33qjj1sjnim81nc41k711v7s1g.jpg";
+      // scene2Pic = "https://d.agilemaster.com.cn/o_1din33qjj1i1p1eipf4k10oke3n1h.jpg";
+      // scene3Pic = "https://d.agilemaster.com.cn/o_1din33qjj8gm1354jur1vulm81i.jpg";
+      panoramaHfov = 40;
+      maxHfov = 55;
+      linkOut = -1.5;
+      linkAsset = 0;
+      linkIT = 1.5;
+      linkTeach = -1.5;
+      linkParty = 0;
     }
 
     $("#all").click(function () {
@@ -83,13 +98,14 @@
     })
     pannellum.viewer('panorama', {
       "default": {
-        "firstScene": "scene3",
+        "firstScene": "scene1",
         "author": "北京邮电大学",
         "sceneFadeDuration": 1000,
         "autoLoad": true,
         "minPitch": -45,
         "maxPitch": 45,
-        "minHfov": 10
+        "minHfov": 35,
+        "maxHfov": maxHfov,
       },
       "scenes": {
         "scene1": {
@@ -102,8 +118,8 @@
           "panorama": scene1Pic,
           "hotSpots": [
             {
-              "pitch": -12,
-              "yaw": 2,
+              "pitch": -15,
+              "yaw": 0,
               "targetHfov": panoramaHfov,
               "type": "scene",
               "text": "走到这里",
@@ -111,7 +127,7 @@
 						},
             {
               "pitch": -19,
-              "yaw": -84,
+              "yaw": -84.5,
               "type": "info",
               "text": "点我办事",
               "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=党团综合",
@@ -130,9 +146,9 @@
               "text": "点我办事",
               "URL": "https://service.bupt.edu.cn/v4/service/index?selectclasstag=科研财务",
               "cssClass": "operation3"
-						}, 
+						},
             {
-              "pitch": 0,
+              "pitch": linkIT,
               "yaw": -7,
               "type": "info",
               "text": "点我办事",
@@ -140,48 +156,46 @@
               "cssClass": "operation7"
 						},
             {
-              "pitch": -1,
+              "pitch": linkAsset,
               "yaw": -8,
+              "type": "info",
+              "text": "点我办事",
+              "URL": "https://service.bupt.edu.cn/v7/service/index?selectclasstag=资产服务",
+              "cssClass": "operation6"
+            },
+            {
+              "pitch": linkOut,
+              "yaw": -9,
               "type": "info",
               "text": "点我办事",
               "URL": "https://service.bupt.edu.cn/v6/service/index?selectclasstag=外事服务",
               "cssClass": "operation5"
-						},
-
-            {
-              "pitch": -2,
-              "yaw": -9,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v5/service/index?selectclasstag=人事服务",
-              "cssClass": "operation4"
 						},
             {
               "pitch": -3,
               "yaw": -10,
               "type": "info",
               "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v7/service/index?selectclasstag=资产服务",
-              "cssClass": "operation6"
-            }
+              "URL": "https://service.bupt.edu.cn/v5/service/index?selectclasstag=人事服务",
+              "cssClass": "operation4"
+						},
 					]
         },
         "scene2": {
           "title": "场景2",
-          "pitch": -45,
+          "pitch": 0,
           "hfov": panoramaHfov,
           "yaw": 0,
           "type": "equirectangular",
           "panorama": scene2Pic,
           "hotSpots": [
             {
-              "pitch": -12,
+              "pitch": -15,
               "yaw": 0,
               "type": "scene",
               "text": "走到这里",
               "sceneId": "scene3",
-              "targetYaw": 180,
-              "targetPitch": -45,
+              "targetYaw": 135,
               "targetHfov": panoramaHfov,
 						}, {
               "pitch": -20,
@@ -189,7 +203,7 @@
               "type": "scene",
               "text": "回到前台",
               "sceneId": "scene1",
-              "targetYaw": 90,
+              "targetYaw": 77,
               "targetPitch": 0,
               "targetHfov": panoramaHfov,
 						},
@@ -215,26 +229,19 @@
               "URL": "https://service.bupt.edu.cn/v4/service/index?selectclasstag=科研财务",
               "cssClass": "operation3"
             }, {
-              "pitch": -8,
-              "yaw": -23,
+              "pitch": -15.8,
+              "yaw": -54.4,
               "type": "info",
               "text": "点我办事",
               "URL": "https://service.bupt.edu.cn/v5/service/index?selectclasstag=人事服务",
               "cssClass": "operation4"
             }, {
-              "pitch": -5,
-              "yaw": -12,
+              "pitch": -8,
+              "yaw": -23,
               "type": "info",
               "text": "点我办事",
               "URL": "https://service.bupt.edu.cn/v6/service/index?selectclasstag=外事服务",
               "cssClass": "operation5"
-            }, {
-              "pitch": -15.5,
-              "yaw": -54.4,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v7/service/index?selectclasstag=资产服务",
-              "cssClass": "operation6"
             }, {
               "pitch": -2,
               "yaw": -8,
@@ -242,14 +249,21 @@
               "text": "点我办事",
               "URL": "https://service.bupt.edu.cn/v8/service/index?selectclasstag=IT服务",
               "cssClass": "operation7"
+            }, {
+              "pitch": -4,
+              "yaw": -12,
+              "type": "info",
+              "text": "点我办事",
+              "URL": "https://service.bupt.edu.cn/v7/service/index?selectclasstag=资产服务",
+              "cssClass": "operation6"
             }
 					]
         },
         "scene3": {
           "title": "场景3",
-          "pitch": -45,
+          "pitch": 0,
           "hfov": panoramaHfov,
-          "yaw": 0,
+          "yaw": -20,
           "type": "equirectangular",
           "panorama": scene3Pic,
           "hotSpots": [
@@ -264,14 +278,14 @@
               "targetHfov": panoramaHfov,
 						},
             {
-              "pitch": -1,
+              "pitch": linkParty,
               "yaw": 8,
               "type": "info",
               "text": "点我办事",
               "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=党团综合",
               "cssClass": "operation1"
             }, {
-              "pitch": -2,
+              "pitch": linkTeach,
               "yaw": 9,
               "type": "info",
               "text": "点我办事",
@@ -287,23 +301,23 @@
               "cssClass": "operation3"
             },
             {
-              "pitch": -9,
-              "yaw": 29,
+              "pitch": -5,
+              "yaw": 15,
               "type": "info",
               "text": "点我办事",
               "URL": "https://service.bupt.edu.cn/v5/service/index?selectclasstag=人事服务",
               "cssClass": "operation4"
             }, {
-              "pitch": -18.5,
-              "yaw": 78,
+              "pitch": -9,
+              "yaw": 29,
               "type": "info",
               "text": "点我办事",
               "URL": "https://service.bupt.edu.cn/v6/service/index?selectclasstag=外事服务",
               "cssClass": "operation5"
             },
             {
-              "pitch": -5,
-              "yaw": 15,
+              "pitch": -18.5,
+              "yaw": 77.5,
               "type": "info",
               "text": "点我办事",
               "URL": "https://service.bupt.edu.cn/v7/service/index?selectclasstag=资产服务",
