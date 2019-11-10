@@ -30,7 +30,7 @@ body {
   line-height: 24px;
 }
 
-.operation1:after {
+/* .operation1:after {
   content: '党团综合';
 }
 
@@ -56,7 +56,7 @@ body {
 
 .operation7:after {
   content: 'IT服务';
-}
+} */
 
 .pnlm-hotspot.pnlm-scene {
   width: 36px;
@@ -180,4 +180,184 @@ body {
   text-align: center;
   cursor: pointer;
   padding: 0 5px;
+}
+
+body {
+  position: relative;
+}
+
+.menu {}
+
+.menu .item {
+  position: absolute;
+  left: 40px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}
+
+.menu .item span {
+  display: flex;
+  width: 108px;
+  border-radius: 4px;
+  color: #FFFFFF;
+  font-size: 18px;
+  text-align: center;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  background: rgba(42, 96, 231, 0.95);
+  cursor: pointer;
+}
+
+.menu .item:nth-child(1) {
+  left: 40px;
+  top: 20px;
+}
+
+.menu .item:nth-child(1) span {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.menu .item2 {
+  top: 76px;
+}
+
+.menu .item3 {
+  top: 132px;
+}
+
+.menu .item4 {
+  top: 188px;
+}
+
+.menu .item5,
+.menu .item6,
+.menu .item7,
+.menu .item8 {
+  left: auto;
+  right: 40px;
+  padding-right: 0;
+  padding-left: 20px;
+}
+
+.menu .item5 {
+  top: 20px;
+}
+
+.menu .item6 {
+  top: 76px;
+}
+
+.menu .item7 {
+  top: 132px;
+}
+
+.menu .item8 {
+  top: 188px;
+}
+
+.link {
+  display: none;
+  position: absolute;
+  z-index: 999;
+  left: 113px;
+  top: 0;
+  width: 300px;
+
+  background: #FFFFFF;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.link h3 {
+  font-size: 18px;
+  background: rgba(42, 96, 231, 0.95);
+  color: #FFFFFF;
+}
+
+.link a {
+  display: block;
+  color: #333;
+  transition: 0.3s;
+  text-align: left;
+  padding: 10px 15px;
+  border-bottom: 1px solid #E5E5E5;
+}
+
+
+
+.link a:last-child {
+  border-bottom: none;
+}
+
+.link a:hover {
+  background: rgba(42, 96, 231, 0.95);
+  color: #FFFFFF;
+  border-radius: 3px;
+}
+
+.menu .item5 .link,
+.menu .item6 .link,
+.menu .item7 .link,
+.menu .item8 .link {
+  left: auto;
+  right: 112px;
+}
+
+.menu .item.mobile span {
+  width: 80px;
+  height: 28px;
+  font-size: 14px;
+}
+
+.menu .item5.mobile,
+.menu .item6.mobile,
+.menu .item7.mobile,
+.menu .item8.mobile {
+  right: 10px;
+}
+
+.menu .link.mobile {
+  max-width: 50%;
+  font-size: 12px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-43%, -50%);
+}
+
+.menu .item.mobile {
+  padding: 0;
+}
+
+.menu .item.mobile .link a {
+  padding: 10px 5px;
+  text-align: center;
+}
+
+.menu .item1.mobile,
+.menu .item5.mobile {
+  top: 12px;
+}
+
+.menu .item2.mobile,
+.menu .item6.mobile {
+  top: 52px;
+}
+
+.menu .item3.mobile,
+.menu .item7.mobile {
+  top: 92px;
+}
+
+.menu .item4.mobile,
+.menu .item8.mobile {
+  top: 132px;
+}
+
+.menu .item5 .link a,
+.menu .item6 .link a,
+.menu .item7 .link a,
+.menu .item8 .link a {
+  text-align: right;
 }

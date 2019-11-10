@@ -1,340 +1,260 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>北京邮电大学数字政务</title>
-  <link rel="stylesheet" type="text/css" href="css/reset.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.2/build/pannellum.css" />
-  <link rel="stylesheet" type="text/css" href="css/index.css" />
-</head>
-<body>
-  <div id="panorama"></div>
-  <div class="right-top-menu">
-    <h2>窗口搜索</h2>
-    <ul>
-      <li id="all">所有事项</li>
-    </ul>
-  </div>
-  <div class="modal">
-    <div class="modal-underview"></div>
-    <div class="modal-content">
-      <h2>办事事项</h2>
-      <i class="icon-close"><img src="image/close.png"></i>
-      <ul>
-        <li>
-          <span>党团综合</span>
-          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/index?selectclasstag=党团综合" class="button">办事点我</a>
-        </li>
-        <li>
-          <span>教学服务</span>
-          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/index?selectclasstag=教学服务" class="button">办事点我</a>
-        </li>
-        <li>
-          <span>科研财务</span>
-          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/index?selectclasstag=科研财务" class="button">办事点我</a>
-        </li>
-        <li>
-          <span>人事服务</span>
-          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/index?selectclasstag=人事服务" class="button">办事点我</a>
-        </li>
-        <li>
-          <span>外事服务</span>
-          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/index?selectclasstag=外事服务" class="button">办事点我</a>
-        </li>
-        <li>
-          <span>资产服务</span>
-          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/index?selectclasstag=资产服务" class="button">办事点我</a>
-        </li>
-        <li>
-          <span>IT服务</span>
-          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/index?selectclasstag=IT服务" class="button">办事点我</a>
-        </li>
-      </ul>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>北京邮电大学数字政务</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.2/build/pannellum.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+  </head>
+  <body>
+    <div id="panorama"></div>
+    <!-- <div class="right-top-menu">
+      <h2>窗口搜索</h2>
+    </div> -->
+    <div class="menu">
+      <div class="item item1">
+        <span>
+          窗口搜索
+        </span>
+      </div>
+      <div class="item item2">
+        <span>党团服务</span>
+        <div class="link">
+          <!-- <h3>办事点我</h3> -->
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=320">用印申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=318">OA开通权限申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=361">长顺矿泉水使用申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=358">对外新闻宣传发布申报</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=334">事业单位法人证书领用申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=338">北京邮电大学法律服务申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=382">处级干部请假</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=343">北京邮电大学合同审批表</a>
+        </div>
+      </div>
+      <div class="item item3">
+        <span>
+          教学服务
+        </span>
+        <div class="link">
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=362">研究生休学、复学、新生保留入学资格、退学申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=348">献血申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=351">借户籍卡申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=344">培训项目审批表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=349">更改乘车区间</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=417">本科生请假审批表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=347">在校生在读证明</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=416">本科生休学、复学、留级转专业、更改个人信息转单</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=346">补办学生证</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=418">退学、转学校内转单</a>
+        </div>
+      </div>
+      <div class="item item4">
+        <span>
+          财务科研
+        </span>
+        <div class="link">
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=369">财务处新增，变更系统设置申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=393">纵向科研项目预支经费申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=323">科研经费预借票据申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=402">科研经费来款信息表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=355">科研经费预算调整备案表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=366">经费支付签字授权委托书</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=353">财务资料领用申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=365">科技成果转化现金奖励申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=367">调账申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=376">科研项目管理人变更申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=388">上缴结余经费申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=368">科研项目经费分卡申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=354">财务档案查阅申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=357">公务卡业务办理申请</a>
+        </div>
+      </div>
+      <div class="item item5">
+        <span>
+          人事服务
+        </span>
+        <div class="link">
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=403">高等学校助教职务任职资格申报表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=389">兼职申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=383">人才引进</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=374">一般在职证明申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=392">引进人才科研启动经费预算申报</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=390">在职继续教育申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=372">中文出国在职证明</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=373">中英文出国在职证明</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=391">职称证明申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=413">高等学校教师职务任职资格申报表（教授、副教授任职资格申报）</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=412">高等学校讲师职务资格申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=406">初聘专业技术职务呈报表（其他中初级专业技术职务申报）</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=411">专业技术职务任职资格申报表（其他高级专业技术职务申报）</a>
+        </div>
+      </div>
+      <div class="item item6">
+        <span>
+          外事服务
+        </span>
+        <div class="link">
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=396">处级干部因公临时赴台申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=385">教职工（一般老师）因公出国申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=386">处级干部因公临时出国（境）申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=397">教职工（一般老师）因公赴台申请</a>
+        </div>
+      </div>
+      <div class="item item7">
+        <span>
+          资产服务
+        </span>
+        <div class="link">
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=333">购置易制毒化学品申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=339">公用房装修改造申请</a>
+        </div>
+      </div>
+      <div class="item item8">
+        <span>
+          信息服务
+        </span>
+        <div class="link">
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=322">网络域名申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=337">门户开通发布权限申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=335">开通单位短信服务申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=336">会议签到系统使用申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=342">虚拟机申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=352">数据共享申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=340">公用邮箱申请表</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=341">网络信息服务申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=321">电话业务办理申请</a>
+        </div>
+      </div>
     </div>
-  </div>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.2/build/pannellum.js"></script>
-  <script src="js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
-  <script>
-    //pc
-    var scene1Pic = "https://d.agilemaster.com.cn/o_1dirfslsb16u1k531a2643n8moe.jpg";
-    var scene2Pic = "https://d.agilemaster.com.cn/o_1dirfslsbv60grg19p16iq1cv7f.jpg";
-    var scene3Pic = "https://d.agilemaster.com.cn/o_1dirfslsb1ifn12hli8i19hf1eisg.jpg";
-    var panoramaHfov = 90; //景深
-    var maxHfov = 110; //最大景深
-    //链接
-    var linkOut = -2.2;
-    var linkAsset = -1.4;
-    var linkIT = -0.6;
-    var linkTeach = -2.2;
-    var linkParty = -1.4;
-    var mobileCss = '';
-    //移动端
-    if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { //移动端
-      //质量10
-      scene1Pic = "https://d.agilemaster.com.cn/o_1dirfslsb1itt1f3t1h25e4a1ajmh.jpg";
-      scene2Pic = "https://d.agilemaster.com.cn/o_1dis586bbbuauga1rht10jjoiu45.jpg";
-      scene3Pic = "https://d.agilemaster.com.cn/o_1dirfslsc1evib78gpklp61fpcj.jpg";
-      panoramaHfov = 40;
-      maxHfov = 55;
-      linkOut = -2;
-      linkAsset = -1;
-      linkIT = 0;
-      linkTeach = -2;
-      linkParty = -1;
-      mobileCss = ' mobile'
-    }
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.2/build/pannellum.js"></script>
+    <script src="js/jquery-2.1.0.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+      //pc
+      var scene1Pic = "https://d.agilemaster.com.cn/o_1dp9jq0uf15c112qbk4f1ah8qu9g.jpg";
+      var scene2Pic = "https://d.agilemaster.com.cn/o_1dp9o7fve1vti5q4177pi48niqa.jpg";
+      var scene3Pic = "https://d.agilemaster.com.cn/o_1dp9o7fve1u141bjneeq15bqu7kb.jpg";
+      var panoramaHfov = 100; //景深
+      var panoramaHfov3 = 110; //景深
+      var maxHfov = 110; //最大景深
+      var panoramaPitch = -10; //仰角
+      //链接
+      var mobileCss = '';
+      //移动端
+      if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { //移动端
+        //质量10
+        // scene1Pic = "https://d.agilemaster.com.cn/o_1dp9jq0uf15c112qbk4f1ah8qu9g.jpg";
+        // scene2Pic = "https://d.agilemaster.com.cn/o_1dis586bbbuauga1rht10jjoiu45.jpg";
+        // scene3Pic = "https://d.agilemaster.com.cn/o_1dirfslsc1evib78gpklp61fpcj.jpg";
+        panoramaHfov = 40;
+        panoramaHfov3 = 90;
+        maxHfov = 50; //最大景深
+        panoramaPitch = 0; //仰角
+        mobileCss = ' mobile'
+        $(".item").addClass('mobile')
+        $(".link").addClass('mobile')
+      }
 
-    $("#all").click(function () {
-      $(".modal").fadeIn()
-    });
-    $(".modal-content .icon-close").click(function () {
-      $(".modal").fadeOut()
-    })
-    $(".modal-underview").click(function () {
-      $(".modal").fadeOut()
-    })
-    var viewer = pannellum.viewer('panorama', {
-      "default": {
-        "firstScene": "scene1",
-        "author": "北京邮电大学",
-        "sceneFadeDuration": 1000,
-        "autoLoad": true,
-        "minPitch": -45,
-        "maxPitch": 45,
-        "minHfov": 35,
-        "maxHfov": maxHfov,
-      },
-      "scenes": {
-        "scene1": {
-          "title": "场景1",
-          "hfov": panoramaHfov,
-          "pitch": -10,
-          "yaw": 0,
-          "type": "equirectangular",
-          "panorama": scene1Pic,
-          "hotSpots": [
-            {
-              "pitch": -15,
-              "yaw": 0,
-              "targetHfov": panoramaHfov,
-              "type": "scene",
-              "text": "走到这里",
-              "sceneId": "scene2"
-						},
-            {
-              "pitch": -19,
-              "yaw": -84.5,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=党团综合",
-              "cssClass": "operation1" + mobileCss
-						}, {
-              "pitch": -10,
-              "yaw": -30,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=教学服务",
-              "cssClass": "operation2" + mobileCss
-						}, {
-              "pitch": -5,
-              "yaw": -16,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=科研财务",
-              "cssClass": "operation3" + mobileCss
-						},
-            {
-              "pitch": linkIT,
-              "yaw": -7,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=IT服务",
-              "cssClass": "operation7" + mobileCss
-						},
-            {
-              "pitch": linkAsset,
-              "yaw": -8,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=资产服务",
-              "cssClass": "operation6" + mobileCss
-            },
-            {
-              "pitch": linkOut,
-              "yaw": -9,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=外事服务",
-              "cssClass": "operation5" + mobileCss
-						},
-            {
-              "pitch": -3,
-              "yaw": -10,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=人事服务",
-              "cssClass": "operation4" + mobileCss
-						},
-					]
+      $("#all").click(function() {
+        $(".modal").fadeIn()
+      });
+      $(".modal-content .icon-close").click(function() {
+        $(".modal").fadeOut()
+      })
+      $(".modal-underview").click(function() {
+        $(".modal").fadeOut()
+      })
+      var viewer = pannellum.viewer('panorama', {
+        "default": {
+          "firstScene": "scene1",
+          "author": "北京邮电大学",
+          "sceneFadeDuration": 1000,
+          "autoLoad": true,
+          "minPitch": -45,
+          "maxPitch": 45,
+          "minHfov": 35,
+          "maxHfov": maxHfov,
         },
-        "scene2": {
-          "title": "场景2",
-          "pitch": -10,
-          "hfov": panoramaHfov,
-          "yaw": 0,
-          "type": "equirectangular",
-          "panorama": scene2Pic,
-          "hotSpots": [
-            {
+        "scenes": {
+          "scene1": {
+            // "title": "场景1",
+            "hfov": panoramaHfov,
+            "pitch": panoramaPitch,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": scene1Pic,
+            "hotSpots": [{
+              "pitch":-10,
+              "yaw": 0,
+              "targetHfov": panoramaHfov,
+              "type": "scene",
+              // "text": "走到这里",
+              "sceneId": "scene2"
+            }, ]
+          },
+          "scene2": {
+            // "title": "场景2",
+            "pitch": panoramaPitch,
+            "hfov": panoramaHfov,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": scene2Pic,
+            "hotSpots": [{
               "pitch": -15,
               "yaw": 0,
               "type": "scene",
-              "text": "走到这里",
+              // "text": "走到这里",
               "sceneId": "scene3",
-              "targetYaw": 135,
-              "targetPitch": -10,
-              "targetHfov": panoramaHfov,
-						}, {
-              "pitch": -20,
+              "targetYaw": 180,
+              "targetPitch": panoramaPitch,
+              "targetHfov": panoramaHfov3,
+            }, {
+              "pitch": -10,
               "yaw": -180,
               "type": "scene",
-              "text": "回到前台",
+              // "text": "回到前台",
               "sceneId": "scene1",
-              "targetYaw": 77,
-              "targetPitch": 0,
+              "targetYaw": 180,
+              // "targetPitch": 0,
               "targetHfov": panoramaHfov,
-						},
-            {
-              "pitch": -4,
-              "yaw": -166,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=党团综合",
-              "cssClass": "operation1" + mobileCss
-            }, {
-              "pitch": -7.5,
-              "yaw": -159,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=教学服务",
-              "cssClass": "operation2" + mobileCss
-            }, {
-              "pitch": -14,
-              "yaw": -132.2,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=科研财务",
-              "cssClass": "operation3" + mobileCss
-            }, {
-              "pitch": -15.8,
-              "yaw": -54.4,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=人事服务",
-              "cssClass": "operation4" + mobileCss
-            }, {
-              "pitch": -8,
-              "yaw": -23,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=外事服务",
-              "cssClass": "operation5" + mobileCss
-            }, {
-              "pitch": -2,
-              "yaw": -8,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=IT服务",
-              "cssClass": "operation7" + mobileCss
-            }, {
-              "pitch": -4,
-              "yaw": -12,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=资产服务",
-              "cssClass": "operation6" + mobileCss
-            }
-					]
-        },
-        "scene3": {
-          "title": "场景3",
-          "pitch": -10,
-          "hfov": panoramaHfov,
-          "yaw": 0,
-          "type": "equirectangular",
-          "panorama": scene3Pic,
-          "hotSpots": [
-            {
+            }]
+          },
+          "scene3": {
+            // "title": "场景3",
+            "pitch": panoramaPitch,
+            "hfov": panoramaHfov3,
+            "yaw": 0,
+            "type": "equirectangular",
+            "panorama": scene3Pic,
+            "hotSpots": [{
               "pitch": -20,
               "yaw": 0,
               "type": "scene",
-              "text": "走到这里",
+              // "text": "场景2",
               "sceneId": "scene2",
               "targetYaw": 180,
-              "targetPitch": -10,
+              // "targetPitch": -10,
               "targetHfov": panoramaHfov,
-						},
-            {
-              "pitch": linkParty,
-              "yaw": 8,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=党团综合",
-              "cssClass": "operation1" + mobileCss
             }, {
-              "pitch": linkTeach,
-              "yaw": 9,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=教学服务",
-              "cssClass": "operation2" + mobileCss
-            },
-            {
-              "pitch": -3,
-              "yaw": 10,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=科研财务",
-              "cssClass": "operation3" + mobileCss
-            },
-            {
-              "pitch": -5,
-              "yaw": 15,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=人事服务",
-              "cssClass": "operation4" + mobileCss
-            }, {
-              "pitch": -9,
-              "yaw": 29,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=外事服务",
-              "cssClass": "operation5" + mobileCss
-            },
-            {
-              "pitch": -18.5,
-              "yaw": 77.5,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=资产服务",
-              "cssClass": "operation6" + mobileCss
-            },
-            {
-              "pitch": -11.6,
-              "yaw": 145,
-              "type": "info",
-              "text": "点我办事",
-              "URL": "https://service.bupt.edu.cn/v2/service/index?selectclasstag=IT服务",
-              "cssClass": "operation7" + mobileCss
-            }
-					]
+              "pitch": -7,
+              "yaw": 0,
+              "type": "scene",
+              // "text": "场景1",
+              "sceneId": "scene1",
+              "targetYaw": 180,
+              // "targetPitch": -10,
+              "targetHfov": panoramaHfov,
+            }]
+          }
         }
-      }
-    });
-    // $(".pnlm-hotspot-base").addClass('mobile')
-  </script>
+      });
+      $(".menu .item").hover(function() {
+        $(this).find('.link').fadeIn()
+      }, function() {
+        $(this).find('.link').fadeOut()
+      })
+    </script>
 
-</body>
+  </body>
 </html>
