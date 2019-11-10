@@ -13,7 +13,7 @@ body {
 .pnlm-hotspot-base {
   z-index: 999;
   background-image: none;
-  width: 80px;
+  /* width: 80px; */
   line-height: 30px;
   height: 30px;
   text-align: center;
@@ -22,6 +22,19 @@ body {
   color: #FFFFFF;
   font-size: 14px;
 }
+.tomain{
+  width: 140px;
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+}
+.tomain:after {
+  content: '点击进入办理';
+}
+
+.pnlm-hotspot:hover {
+  background-color: inherit;
+}
 
 .pnlm-hotspot-base.mobile {
   font-size: 12px;
@@ -29,34 +42,6 @@ body {
   height: 24px;
   line-height: 24px;
 }
-
-/* .operation1:after {
-  content: '党团综合';
-}
-
-.operation2:after {
-  content: '教学服务';
-}
-
-.operation3:after {
-  content: '科研财务';
-}
-
-.operation4:after {
-  content: '人事服务';
-}
-
-.operation5:after {
-  content: '外事服务';
-}
-
-.operation6:after {
-  content: '资产服务';
-}
-
-.operation7:after {
-  content: 'IT服务';
-} */
 
 .pnlm-hotspot.pnlm-scene {
   width: 36px;
@@ -186,13 +171,16 @@ body {
   position: relative;
 }
 
-.menu {}
-
 .menu .item {
+  z-index: 9;
   position: absolute;
   left: 40px;
   padding-bottom: 20px;
   padding-right: 20px;
+}
+
+.menu .item.no-zindex {
+  z-index: initial;
 }
 
 .menu .item span {
@@ -259,14 +247,13 @@ body {
 .link {
   display: none;
   position: absolute;
-  z-index: 999;
   left: 113px;
   top: 0;
   width: 300px;
-
   background: #FFFFFF;
   border-radius: 3px;
   overflow: hidden;
+  z-index: 999;
 }
 
 .link h3 {

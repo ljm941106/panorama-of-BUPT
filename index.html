@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>北京邮电大学数字政务</title>
+    <title>北京邮电大学网上服务大厅</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.2/build/pannellum.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
@@ -144,9 +144,9 @@
       //移动端
       if (/(iPhone|iPad|iPod|iOS|Android)/i.test(navigator.userAgent)) { //移动端
         //质量10
-        // scene1Pic = "https://d.agilemaster.com.cn/o_1dp9jq0uf15c112qbk4f1ah8qu9g.jpg";
-        // scene2Pic = "https://d.agilemaster.com.cn/o_1dis586bbbuauga1rht10jjoiu45.jpg";
-        // scene3Pic = "https://d.agilemaster.com.cn/o_1dirfslsc1evib78gpklp61fpcj.jpg";
+        scene1Pic = "https://d.agilemaster.com.cn/o_1dp9u6ene11si1gcc1d1g1b23hjis.jpg";
+        scene2Pic = "https://d.agilemaster.com.cn/o_1dp9u6enfqbe2r7voq1k8h3b3t.jpg";
+        scene3Pic = "https://d.agilemaster.com.cn/o_1dp9u6enfo7415mj1ibb1ia11pchu.jpg";
         panoramaHfov = 40;
         panoramaHfov3 = 90;
         maxHfov = 50; //最大景深
@@ -154,6 +154,22 @@
         mobileCss = ' mobile'
         $(".item").addClass('mobile')
         $(".link").addClass('mobile')
+        $(".menu .item").click(function(e) {
+          $(".menu .item").addClass('no-zindex')
+          $('.link').hide()
+          e.stopPropagation()
+          $(this).find('.link').fadeIn()
+        })
+        $("#panorama").click(function() {
+          $(".menu .item").removeClass('no-zindex')
+          $('.link').fadeOut()
+        })
+      } else {
+        $(".menu .item").hover(function() {
+          $(this).find('.link').fadeIn()
+        }, function() {
+          $(this).find('.link').fadeOut()
+        })
       }
 
       $("#all").click(function() {
@@ -185,13 +201,19 @@
             "type": "equirectangular",
             "panorama": scene1Pic,
             "hotSpots": [{
-              "pitch":-10,
+              "pitch": -10,
               "yaw": 0,
               "targetHfov": panoramaHfov,
               "type": "scene",
               // "text": "走到这里",
               "sceneId": "scene2"
-            }, ]
+            }, {
+              "pitch": -20,
+              "yaw": 0,
+              "type": "info",
+              "URL": "https://service.bupt.edu.cn/v2/site/index",
+              "cssClass": "tomain"
+            }]
           },
           "scene2": {
             // "title": "场景2",
@@ -249,11 +271,6 @@
           }
         }
       });
-      $(".menu .item").hover(function() {
-        $(this).find('.link').fadeIn()
-      }, function() {
-        $(this).find('.link').fadeOut()
-      })
     </script>
 
   </body>
