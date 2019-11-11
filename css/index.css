@@ -22,12 +22,14 @@ body {
   color: #FFFFFF;
   font-size: 14px;
 }
-.tomain{
+
+.tomain {
   width: 140px;
   font-size: 18px;
   height: 40px;
   line-height: 40px;
 }
+
 .tomain:after {
   content: '点击进入办理';
 }
@@ -52,12 +54,12 @@ body {
 }
 
 .pnlm-hotspot.pnlm-scene:after {
+  content: '';
+  display: block;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
-  display: block;
-  content: '';
   width: 24px;
   height: 24px;
   background: url(../image/foot.png) center no-repeat / cover;
