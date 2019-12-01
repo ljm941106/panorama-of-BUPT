@@ -3,22 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>北京邮电大学网上服务大厅</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.2/build/pannellum.css" />
     <link rel="stylesheet" type="text/css" href="css/index.css" />
-    <script type="text/javascript">
-      var userAgent = navigator.userAgent; //取得浏览器的userAgent字符串  
-      var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器  
-      var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
-      if (isIE || isIE11) {
-        var r = confirm("您的浏览器版本过低，请升级浏览器以便更好的访问")
-        if (r == true) {
-          window.location = 'https://www.google.cn/chrome/'
-        }
-      }
-    </script>
   </head>
   <body>
     <div id="panorama"></div>
@@ -67,14 +55,14 @@
           财务科研
         </span>
         <div class="link">
-          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=369">财务处新增，变更系统设置申请表</a>
+         <!-- <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=369">财务处新增，变更系统设置申请表</a>-->
           <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=393">纵向科研项目预支经费申请</a>
           <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=323">科研经费预借票据申请表</a>
           <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=402">科研经费来款信息表</a>
           <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=355">科研经费预算调整备案表</a>
           <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=366">经费支付签字授权委托书</a>
           <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=353">财务资料领用申请</a>
-          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=365">科技成果转化现金奖励申请表</a>
+        <!--  <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=365">科技成果转化现金奖励申请表</a>-->
           <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=367">调账申请</a>
           <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=376">科研项目管理人变更申请</a>
           <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=388">上缴结余经费申请表</a>
@@ -136,7 +124,8 @@
           <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=352">数据共享申请</a>
           <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=340">公用邮箱申请表</a>
           <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=341">网络信息服务申请</a>
-          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=321">电话业务办理申请</a>
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=419">机房设备迁入(出)设备登记</a> 
+          <a target="_blank" href="https://service.bupt.edu.cn/v2/service/detail?id=420">5G CPE设备领用申请</a>         
         </div>
       </div>
     </div>
@@ -150,7 +139,7 @@
       var panoramaHfov = 100; //景深
       var panoramaHfov3 = 110; //景深
       var maxHfov = 110; //最大景深
-      var panoramaPitch = -10; //仰角
+      var panoramaPitch = 0; //仰角
       //链接
       var mobileCss = '';
       //移动端
